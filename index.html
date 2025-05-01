@@ -1,109 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Webpage</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            color: #333;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Static Webpage</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Welcome to My Static Webpage</h1>
+            <p>
+                This is a simple static webpage created with
+                <span class="highlight">HTML</span>,
+                <span class="highlight">CSS</span>, and
+                <span class="highlight">JavaScript</span>.
+            </p>
+            <p id="dynamic-text">
+                The text here will change when you click the button below.
+            </p>
+            <button id="change-text-btn">Change Text</button>
+        </div>
 
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            max-width: 600px;
-            width: 100%;
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .highlight {
-            background-color: #f1c40f;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome to My Static Webpage</h1>
-        <p>This is a simple static webpage created with <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, and <span class="highlight">JavaScript</span>.</p>
-        <p id="dynamic-text">The text here will change when you click the button below.</p>
-        <button id="change-text-btn">Change Text</button>
-    </div>
-
-    <script>
-        // Get references to DOM elements
-        const button = document.getElementById('change-text-btn');
-        const dynamicText = document.getElementById('dynamic-text');
-        
-        // Array of text options
-        const textOptions = [
-            "JavaScript makes this webpage interactive!",
-            "Static webpages can still be dynamic with JavaScript.",
-            "Thanks for clicking the button!",
-            "Web development is fun and creative.",
-            "HTML structures, CSS styles, and JavaScript adds behavior."
-        ];
-        
-        // Track current text index
-        let currentTextIndex = 0;
-        
-        // Add click event listener to button
-        button.addEventListener('click', function() {
-            // Change the text content
-            currentTextIndex = (currentTextIndex + 1) % textOptions.length;
-            
-            // Fade out effect
-            dynamicText.style.opacity = 0;
-            
-            // Change text and fade in after a short delay
-            setTimeout(function() {
-                dynamicText.textContent = textOptions[currentTextIndex];
-                dynamicText.style.opacity = 1;
-            }, 300);
-        });
-        
-        // Add transition for smooth fade effect
-        dynamicText.style.transition = "opacity 0.3s ease";
-    </script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
