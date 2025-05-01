@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 #[tokio::main]
 async fn main() {
     // build our application with a single route
-    let app = Router::new().route("/", post(input_manager));
+    let app = Router::new().route("/api", post(input_manager));
 
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
