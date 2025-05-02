@@ -1,3 +1,3 @@
 function submit() {
-    document.getElementById("submit_report").addEventListener(type="submit",send())
+    document.getElementById("submit-report").addEventListener(type="submit",send())
 }
