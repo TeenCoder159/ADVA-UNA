@@ -3,12 +3,13 @@ const button = document.getElementById("change-text-btn");
 const dynamicText = document.getElementById("dynamic-text");
 
 // Array of text options
+// Update text options for the homepage
 const textOptions = [
-  "JavaScript makes this webpage interactive!",
-  "Static webpages can still be dynamic with JavaScript.",
-  "Thanks for clicking the button!",
-  "Web development is fun and creative.",
-  "HTML structures, CSS styles, and JavaScript adds behavior.",
+  "Learn about dengue prevention and care to protect yourself and your community.",
+  "Dengue fever is transmitted by Aedes mosquitoes, which typically bite during the day.",
+  "Early detection and proper medical care can significantly reduce fatality rates.",
+  "Use mosquito repellents, wear long sleeves, and eliminate standing water to prevent dengue.",
+  "ASEAN countries account for a significant portion of global dengue cases each year.",
 ];
 
 // Track current text index
