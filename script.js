@@ -31,3 +31,28 @@ button.addEventListener("click", function () {
 
 // Add transition for smooth fade effect
 dynamicText.style.transition = "opacity 0.3s ease";
+
+// Add card hover effects
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all cards
+  const cards = document.querySelectorAll('.card');
+  
+  // Add event listeners for each card
+  cards.forEach(card => {
+    // Add subtle animation on hover
+    card.addEventListener('mouseenter', function() {
+      this.style.transform = 'translateY(-10px)';
+      this.style.boxShadow = '0 12px 20px rgba(0, 0, 0, 0.2)';
+    });
+    
+    card.addEventListener('mouseleave', function() {
+      this.style.transform = 'translateY(0)';
+      this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    });
+    
+    // Add click effect for mobile users
+    card.addEventListener('click', function() {
+      this.classList.toggle('card-expanded');
+    });
+  });
+});

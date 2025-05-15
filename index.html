@@ -3,30 +3,88 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ADVA-UNA</title>
+        <title>ADVA-UNA | Dengue Awareness</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     </head>
     <body>
-        <h1>Protecting ASEAN from dengue</h1>
-        <h2>
-            Our website serves as a platform for residents of ASEAN countries to
-            protect themselves and those around them from the Dengue disease.
-        </h2>
-        <a href="do's.html">
-            <!--replace with link to Do's page-->
-            <button>Advice on what to do</button>
-        </a>
-        <a href="dont's.html">
-            <!--replace with link to Dont's page-->
-            <button>Advice on what to avoid</button>
-        </a>
-        <a href="symptoms.html">
-            <!--replace with link to symptoms page-->
-            <button>Symptoms you might be facing</button>
-        </a>
-        <a href="submit_prompt/popup.html">
-            <!--replace with link to symptoms page-->
-            <button>Reports page</button>
-        </a>
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Protecting ASEAN from Dengue</h1>
+                <p class="tagline">
+                    Our platform empowers residents of ASEAN countries with knowledge to protect 
+                    themselves and their communities from dengue fever.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="intro-section">
+                <h2>What is Dengue Fever?</h2>
+                <p>
+                    Dengue is a mosquito-borne viral infection that causes flu-like symptoms and can 
+                    sometimes develop into a potentially lethal complication called severe dengue. 
+                    The incidence of dengue has grown dramatically around the world in recent decades, 
+                    with ASEAN countries being particularly affected.
+                </p>
+                <p id="dynamic-text">Together, we can reduce the impact of dengue in our communities.</p>
+                <button id="change-text-btn" class="action-btn">Learn More</button>
+            </div>
+            
+            <h2>How Can We Help You?</h2>
+            
+            <div class="card-container">
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Recommended Actions</h3>
+                    <p>Learn what steps to take if you or someone you know has dengue symptoms.</p>
+                    <a href="do's.html" class="card-link">
+                        <button>Advice on what to do</button>
+                    </a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                    <h3>Actions to Avoid</h3>
+                    <p>Understand what practices to avoid that could worsen dengue symptoms or spread.</p>
+                    <a href="dont's.html" class="card-link">
+                        <button>Advice on what to avoid</button>
+                    </a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Recognize Symptoms</h3>
+                    <p>Identify the warning signs and symptoms of dengue fever for early detection.</p>
+                    <a href="symptoms.html" class="card-link">
+                        <button>Symptoms you might be facing</button>
+                    </a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Report Cases</h3>
+                    <p>Help track dengue outbreaks by reporting cases in your area to improve response.</p>
+                    <a href="submit_prompt/popup.html" class="card-link">
+                        <button>Report a case</button>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2023 ADVA-UNA | Dengue Awareness Initiative</p>
+                <p>Protecting ASEAN communities through education and awareness</p>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
     </body>
 </html>
